@@ -1,0 +1,91 @@
+html,
+body {
+  --color: #02d4c3;
+  --icon-width: 60px;
+  --text-width: 100px;
+  --padding: 2.5rem;
+  --duration: 0.2s;
+  font-family: sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+	cursor:pointer;
+  width: calc(var(--icon-width) + var(--text-width));
+  height: calc(100% - var(--padding));
+  background-color: var(--color);
+  position: absolute;
+  top: calc(var(--padding) * 0.5);
+  left: calc(var(--padding) * 0.5);
+  border-radius: var(--icon-width);
+  transform: translatex(calc(var(--icon-width) * var(--active)));
+  transition: transform var(--duration) ease-in-out;
+  font-weight: bolder;
+}
+
+ul {
+	border-radius:40px;
+  list-style: none;
+  background-color: rgb(255, 255, 241);
+  margin: 0;
+  padding: var(--padding) calc(var(--padding) / 2);
+  position: relative;
+  padding-right: calc(var(--text-width) + var(--padding) / 2);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-auto-flow: column;
+}
+
+li {
+  position: relative;
+
+  > * {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 0;
+  }
+
+  .navbar-icon{
+    z-index: 100;
+    justify-content: center;
+    width: var(--icon-width);
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.3;
+    transition-property: opacity, transform;
+    transition-duration: var(--duration);
+    transition-timing-function: ease-in-out;
+  }
+
+  .navbar-text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: var(--text-width);
+    margin-left: var(--icon-width);
+    pointer-events: none;
+    transition: opacity var(--duration) ease-in-out;
+    height: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  &[data-active] {
+    .navbar-text,
+    .navbar-icon{
+      opacity: 1;
+    }
+  }
+}
+
+[data-active] ~ li .navbar-icon{
+  transform: translatex(calc((var(--i) * 1px) + var(--text-width)));
+}

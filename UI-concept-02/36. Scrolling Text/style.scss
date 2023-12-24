@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: rgb(1, 66, 70);
+  border: 8px solid rgb(0, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+
+  span {
+    color: wheat;
+  }
+}
+
+.scrolling-part {
+  height: 52px;
+  margin: auto;
+  overflow: hidden;
+
+  ul {
+    margin: 0 19px;
+    animation: scrollingAnimation 4s infinite;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      color: aqua;
+      height: 52px;
+      list-style: none;
+    }
+  }
+}
+
+$item-count: 5;
+
+@keyframes scrollingAnimation {
+  @for $i from 1 through ($item-count - 1) {
+    #{($i * 25) - 10%},
+    #{$i * 25%} {
+      transform: translateY((-100% / $item-count) * $i);
+    }
+  }
+}

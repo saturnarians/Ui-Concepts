@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+/* google font link. I used it with @import in css  */
+
+body,
+html {
+  height: 100%;
+  background: #141313;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    height: auto;
+    width: 600px;
+    margin: 50px auto;
+  display: block;
+  position: relative;
+  padding: 20px;
+}
+
+h2 {
+  color: #cecece;
+}
+
+.container ul {
+    overflow: auto;
+    list-style: none;
+}
+
+ul li {
+  color: #aaaaaa;
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+ul li input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label {
+  display: block;
+  position: relative;
+  font-weight: 300;
+  font-size: 1.35em;
+  padding: 25px 25px 25px 80px;
+  margin: 10px auto;
+  height: 30px;
+  z-index: 9;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+
+ul li:hover label {
+  color: #ffffff;
+}
+
+ul li .check {
+  display: block;
+  position: absolute;
+  border: 4px solid #aaaaaa;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  top: 30px;
+  left: 20px;
+  z-index: 5;
+  transition: border 0.25s linear;
+  -webkit-transition: border 0.25s linear;
+}
+
+ul li:hover .check {
+  border: 4px solid #ffffff;
+}
+
+ul li .check::before {
+    height: 20px;
+    width: 20px;
+  display: block;
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  top: 5px;
+  left: 5.5px;
+  margin: auto;
+  transition: all 0.23s linear;
+}
+
+/* - - - input checked - - -  */
+
+input[type="radio"]:checked ~ .check {
+  border: 5px solid #45B8AC;
+}
+
+input[type="radio"]:checked ~ .check::before {
+  background: #45B8AC;
+}
+
+input[type="radio"]:checked ~ label {
+  color: #45B8AC;
+}

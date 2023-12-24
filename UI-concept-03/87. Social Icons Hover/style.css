@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(20, 13, 13);
+}
+
+.social_icons,
+.social_icons ul,
+.social_icons li {
+    padding: 0 10px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.title {
+    color: wheat;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+
+.social_icons li {
+    list-style: none;
+    display: inline-block;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.social_icons .fa {
+    width: 60px;
+    height: 60px;
+    color: #000;
+    background-color: #FFF;
+    border: 2px solid #000;
+    border-radius: 50%;
+    line-height: 60px;
+    font-size: 34px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* - - - hover part - - -  */
+
+.telegram:hover {
+    background-color: #0088cc;
+    color: white;
+    border: 2px solid white;
+}
+
+.instagram:hover {
+    background-color: #8a3ab9;
+    color: white;
+    border: 2px solid white;
+}
+
+.facebook:hover {
+    background-color: #4267B2;
+    color: white;
+    border: 2px solid white;
+}
+
+.github:hover {
+    background-color: #171515;
+    color: white;
+    border: 2px solid white;
+}
+
+.linkedin:hover {
+    background-color: #0077b5;
+    color: white;
+    border: 2px solid white;
+}
+
+.youtube:hover {
+    background-color: #c4302b;
+    color: white;
+    border: 2px solid white;
+}
+
+.google:hover {
+    background-color: #4285F4;
+    color: white;
+    border: 2px solid white;
+}
+
+.whatsapp:hover {
+    background-color: #25D366;
+    color: white;
+    border: 2px solid white;
+}

@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #0099ff;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#canvas_area {
+  height: 472px;
+  background-color: white;
+  border: 8px solid rgb(0, 0, 0);
+}
+
+.toolbox-part {
+  display: flex;
+  padding: 1rem;
+}
+
+.toolbox-part > * {
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 0 10px;
+  padding: 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.toolbox-part > *:hover {
+  color: #0099ff;
+}

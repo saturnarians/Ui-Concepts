@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+:root {
+  --primary-color: #352ff5;
+  --secondary-color: #5f70a1;
+  --bg-color: #fff;
+  --heading-color: #2c2c25;
+  --font-color: #464545;
+}
+
+[data-theme="dark"] {
+  --primary-color: #918ef1;
+  --secondary-color: #7c85a0;
+  --bg-color: #151524;
+  --heading-color: #818cab;
+  --font-color: #dcdcf5;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: calc(1rem + 0.25vh);
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--heading-color);
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  margin-bottom: 1vh;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  border-bottom: 2px solid currentColor;
+}
+
+section {
+  max-width: 68%;
+  margin: 0 auto;
+}
+
+nav {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  cursor: pointer;
+  background-color: rgb(185, 185, 185);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: all 0.4s ease-out;
+}
+
+.slider:before {
+  content: "";
+  background-color: #fff;
+  bottom: 4px;
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #444744;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 36px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

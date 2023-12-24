@@ -1,0 +1,144 @@
+.content {
+  padding-right: 130px;
+  width: 600px;
+  max-width: 600px;
+}
+.content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.content__header {
+  opacity: 0;
+}
+.content__header h2 {
+  font-size: 115px;
+}
+.content__header h3 {
+  font-size: 44px;
+}
+.content__raking {
+  opacity: 0;
+  margin: 20px 0 25px;
+}
+.content__raking i {
+  font-size: 12px;
+  margin-right: 6px;
+  color: var(--grey);
+}
+.content__raking i.active {
+  color: var(--yellow);
+}
+.content__sipnosis {
+  opacity: 0;
+  color: var(--font);
+  font-weight: 600;
+  line-height: 39px;
+  max-width: 450px;
+  margin: 0 0 15px;
+}
+.content__meta li {
+  opacity: 0;
+  display: grid;
+  grid-template: 1fr/ 150px 1fr;
+  font-weight: 500;
+  color: rgba(228, 228, 228, 0.85);
+  margin-bottom: 15px;
+}
+.content__meta strong {
+  letter-spacing: 0.5px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.movie__content hr {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255,255,255,0.25);
+  opacity: 0;
+  margin: 20px 0 30px;
+  border: none;
+}
+
+.content__featured {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgba(228, 228, 228, 0.85);
+  opacity: 0;
+}
+.content__featured li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 35px;
+}
+.content__featured i {
+  font-size: 22px;
+  line-height: 22px;
+  margin-right: 20px;
+  color: var(--white);
+}
+
+.movie.open .content__header {
+  animation: loadingIn 0.45s ease-in-out 0.45s forwards;
+}
+.movie.open .content__raking {
+  animation: loadingIn 0.45s ease-in-out 0.48s forwards;
+}
+.movie.open .content__sipnosis {
+  animation: loadingIn 0.45s ease-in-out 0.51s forwards;
+}
+.movie.open .content__meta li:nth-child(1) {
+  animation: loadingIn 0.45s ease-in-out 0.54s forwards;
+}
+.movie.open .content__meta li:nth-child(2) {
+  animation: loadingIn 0.45s ease-in-out 0.57s forwards;
+}
+.movie.open .content__meta li:nth-child(3) {
+  animation: loadingIn 0.45s ease-in-out 0.60s forwards;
+}
+.movie.open .content__meta li:nth-child(4) {
+  animation: loadingIn 0.45s ease-in-out 0.63s forwards;
+}
+.movie.open .movie__content hr {
+  animation: loadingIn 0.45s ease-in-out 0.66s forwards;
+}
+.movie.open .content__featured {
+  animation: loadingIn 0.45s ease-in-out 0.69s forwards;
+}
+
+.movie.hidden  .content__header,
+.movie.hidden  .content__raking,
+.movie.hidden  .content__sipnosis, 
+.movie.hidden  .content__meta li,
+.movie.hidden  .movie__content hr, 
+.movie.hidden  .content__featured {
+  animation: loadingOut 0.2s ease-in-out forwards;
+}
+
+@keyframes loadingIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY( 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes loadingOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

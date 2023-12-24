@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  transition: 0.5s;
+  transition-timing-function: ease-in;
+  background-image: linear-gradient(to right, #84fab0, #8fd3f4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+  border-radius: 22px;
+  width: 700px;
+  height: auto;
+  background-color: rgba(224, 222, 222, 0.3);
+  margin: 10px;
+}
+
+.quote {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.author {
+  font-family: "Caveat", cursive;
+  margin: 10px;
+  text-align: right;
+  font-size: 34px;
+  font-style: italic;
+}
+hr {
+  margin: 12px 0;
+  width: 100%;
+  border: 1px solid rgb(65, 65, 65);
+}
+.buttons {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 9px;
+}
+
+.next {
+  margin: 0 auto;
+  font-size: 28px;
+  border-radius: 26px;
+  padding: 15px 30px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(65, 65, 252);
+  transition: all 0.4s ease-out;
+}
+
+.next:hover {
+  background-color: blue;
+}

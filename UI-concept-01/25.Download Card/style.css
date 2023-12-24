@@ -1,0 +1,75 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@500,400&display=swap");
+
+:root {
+  --main-shadow: 0 5px 30px -5px #00000040;
+  --button-size: 50px;
+  --button-radius: 50%;
+  --card-radius: 25px;
+}
+
+body {
+  margin: 0;
+  font-family: "Satoshi", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #282a36
+    ;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Satoshi", sans-serif;
+}
+
+button::before {
+  background: #6369d1;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-weight: bolder;
+}
+
+.card {
+  display: flex;
+  width: 200px;
+  height: 150px;
+  background: url("https://img.freepik.com/premium-photo/shop-online-buying-concept-mobile-app-shopping-cart-with-shopping-bag-floating-purple-pastel-background-discount-promotion-sale-banner-buy-sell-website-3d-render-illustration_598821-1262.jpg?w=2000");
+}
+
+.buttons {
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.3s, padding 0.3s;
+}
+
+.card:hover .buttons {
+  opacity: 1;
+  padding: 1em;
+}
+
+button {
+  min-width: var(--button-size);
+  min-height: var(--button-size);
+  box-shadow: var(--main-shadow);
+  border-radius: var(--button-radius);
+  position: relative;
+  border: none;
+}
+
+button::before {
+  content: attr(data-downloads);
+  position: absolute;
+  right: -25px;
+  top: -10px;
+}
+
+.card {
+  box-shadow: var(--main-shadow);
+  border-radius: var(--card-radius);
+  background-size: cover;
+}

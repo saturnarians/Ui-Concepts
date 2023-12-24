@@ -1,0 +1,99 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:after {
+  content: "";
+}
+
+body {
+  background: rgb(5, 14, 17);
+  color: white;
+  max-width: 100vw;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  padding: 100px 0;
+}
+
+nav {
+  float: right;
+  position: relative;
+  top: 0;
+  right: 0;
+  background: transparent;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav ul li {
+  width: 70px;
+  list-style-type: none;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  background: rgb(22, 124, 150);
+  border: 0.3px solid rgb(1, 172, 172);
+  transition: all 0.4s ease-out;
+}
+nav ul li a i {
+  color: wheat;
+}
+
+nav ul li:after {
+  width: 90px;
+  height: 100%;
+  position: absolute;
+  background: white;
+  color: rgb(0, 153, 255);
+  top: 0;
+  left: 70px;
+  opacity: 0.5;
+  transform: perspective(400px) rotateY(90deg);
+  transform-origin: 0 100%;
+  transition: all 0.4s ease-out;
+}
+
+nav ul li:nth-child(1):after {
+  content: "Home";
+  line-height: 85px;
+}
+nav ul li:nth-child(2):after {
+  content: "user";
+  line-height: 85px;
+}
+nav ul li:nth-child(3):after {
+  content: "work";
+  line-height: 85px;
+}
+nav ul li:nth-child(4):after {
+  content: "read";
+  line-height: 85px;
+}
+nav ul li:nth-child(5):after {
+  content: "set";
+  line-height: 85px;
+}
+
+nav ul li:hover {
+  transform: translateX(-70px);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+nav ul li:hover:after {
+  opacity: 1;
+  transform: perspective(400px) rotateY(0deg) scale(1);
+}
+
+nav ul li > a {
+  display: inline-block;
+  padding: 25px 0;
+  text-decoration: none;
+  color: black;
+}

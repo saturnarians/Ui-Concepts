@@ -1,0 +1,141 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 6.25rem 0;
+  background: #040404 url('https://images.unsplash.com/photo-1462823985959-022de68638a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80') no-repeat center center/cover;
+  color: rgba(255,255,255,0.95);
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+header * {
+  z-index: 1;
+}
+
+header h1 {
+  margin: 0 0 2rem;
+}
+
+form {
+  position: relative;
+  max-width: 70%;
+  width: 50%;
+}
+
+form input {
+  border: 0;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+form button {
+  padding: 0.875rem 2rem;
+  position: absolute;
+  border: 0;
+  background-color: #210b5e;
+  color: rgba(255,255,255,0.95);
+  top: 0.125rem;
+  right: 0.125rem;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: #500543;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+.btn {
+  padding: 0.25rem 0.625rem;
+  border: 0;
+  background-color: #210b5e;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #500543;
+}
+
+ul.songs {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.songs li {
+  margin: 0.625rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  margin: 2rem auto;
+  width: 31.25rem;
+  max-width: 90%;
+}
+
+.container h2 {
+  font-weight: 300;
+}
+
+.container p {
+  text-align: center;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+.centered button {
+  transform: scale(1.3);
+  margin: 15px;
+}
+
+.toast {
+  margin: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #aa175c;
+  color: #fff;
+  font-size: 1rem;
+}

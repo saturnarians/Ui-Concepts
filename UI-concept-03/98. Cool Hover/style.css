@@ -1,0 +1,181 @@
+.container_image__hover {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container_image__hover .container {
+  position: relative;
+  height: 510px;
+  width: 510px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.container_image__hover .container:hover > .bottom-right {
+  top: 55%;
+  left: 80%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.container_image__hover .container:hover > .middle {
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+}
+
+.container_image__hover .container:hover > .top-left {
+  left: -210px;
+  top: -20px;
+  width: 250px;
+  height: 250px;
+  background-color: none;
+}
+
+.container_image__hover .container:hover > .top-right {
+  left: 380px;
+  top: -30px;
+  width: 260px;
+  height: 260px;
+}
+
+.container_image__hover .container:hover > .bottom-left {
+  left: -60%;
+  top: 65%;
+  width: 280px;
+  height: 280px;
+}
+
+.container_image__hover .container .river__image {
+  background: url("img/river.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.container_image__hover .container .background_image {
+  border-radius: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container_image__hover #image__hover {
+  opacity: 0;
+}
+
+.container_image__hover .middle {
+  -webkit-transition: 500ms all;
+  transition: 500ms all;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+  -webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+          transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+  position: relative;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  left: 0;
+  top: 0;
+}
+
+.container_image__hover .middle .background_image {
+  height: 100%;
+  width: 100%;
+}
+
+.container_image__hover .middle .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #116b7783;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.container_image__hover .bottom-right {
+  -webkit-transition: 800ms all;
+  transition: 800ms all;
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+  -webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+          transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+  position: absolute;
+  left: 20%;
+  top: 48%;
+  width: 100px;
+  z-index: 1;
+}
+
+.container_image__hover .bottom-right .background_image {
+  height: 220px;
+  width: 100%;
+}
+
+.container_image__hover .bottom-left {
+  -webkit-transition: 800ms all;
+  transition: 800ms all;
+  -webkit-transition-delay: 0.17s;
+          transition-delay: 0.17s;
+  -webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+          transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 100px;
+  z-index: 1;
+}
+
+.container_image__hover .bottom-left .background_image {
+  height: 220px;
+  width: 100%;
+}
+
+.container_image__hover .top-left {
+  -webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+          transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+  -webkit-transition: 600ms all;
+  transition: 600ms all;
+  -webkit-transition-delay: 0.19s;
+          transition-delay: 0.19s;
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+}
+
+.container_image__hover .top-left .background_image {
+  height: 220px;
+  width: 100%;
+}
+
+.container_image__hover .top-right {
+  -webkit-transition: 500ms all;
+  transition: 500ms all;
+  -webkit-transition-delay: 0.08s;
+          transition-delay: 0.08s;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  width: 260px;
+  height: 260px;
+  z-index: 1;
+  -webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+          transition-timing-function: cubic-bezier(0.17, 0.67, 0.33, 0.97);
+}
+
+.container_image__hover .top-right .background_image {
+  float: right;
+  height: 100%;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

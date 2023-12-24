@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body{
+  overflow-y: hidden;
+}
+
+#slides-part{
+    position: relative;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.active{
+    opacity: 1;
+    z-index: 2;
+}
+
+.controls{
+    display: none;
+}
+
+.slide{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+    background-size: cover;
+}
+
+.slide:nth-of-type(1){
+  background-image: url('./img_1/pexels-baskin-creative-studios-1766838.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.slide:nth-of-type(2){
+  background-image: url('./img_1/pexels-eberhard-grossgasteiger-454880.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat
+}
+
+.slide:nth-of-type(3){
+  background-image: url('./img_1/pexels-felix-mittermeier-957039.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat
+}
+
+.slide:nth-of-type(4){
+  background-image: url('./img_1/pexels-pixabay-36478.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat
+}
+
+.slide:nth-of-type(5){
+  background-image: url('./img_1/pexels-wing-ying-6148803.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat
+}
+
+.controls{
+  display: inline-block;
+ 
+  font-size: 30px;
+  cursor: pointer;
+   border: 3px solid #fff; 
+   background: rgb(0, 119, 255);
+  border-radius: 50%;
+  color: white;
+  width: 60px;
+  height: 60px; 
+  margin-right: 20px;
+  transition: all 0.3s ease-out;
+}
+
+ .buttons {
+position: relative;
+bottom:50%;
+left: 42%;
+} 
+
+.controls:hover,
+.controls:focus{
+  background: #eee;
+  color:rgb(0, 119, 255);
+}
+
+.container{
+  position: relative;
+}
+
+.buttons{
+  position: absolute;
+  right: .5rem;
+  bottom: 0px;
+  z-index: 10;
+  font-size: 0px;
+}

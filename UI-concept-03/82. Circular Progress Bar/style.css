@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: rgb(0, 0, 0);
+}
+/* - - - Circle part - - - */
+.circle {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: 0 20px;
+  border-radius: 50%;
+  background: #fff5ef;
+  overflow: hidden;
+}
+
+.circle.per-50 {
+  background-image: conic-gradient(#f01c14 50%, #fff5ef 0);
+}
+
+.circle.per-100 {
+  background-image: conic-gradient(#f01c14 100%, #fff5ef 0);
+}
+.circle .inner-circle{
+    width: 100px;
+    height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  color: rgba(253, 70, 70, 0.75);
+}
+/* - - - Percenteges Number - - -  */
+
+.inner-circle span {
+    font-weight: bold;
+    display: none;
+    font-size: 30px;
+}
+.circle:hover span {
+display: block;
+}

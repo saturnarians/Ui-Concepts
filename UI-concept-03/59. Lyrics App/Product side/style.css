@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Montserrat, sans-serif;
+}
+@media screen and (max-width: 1200px) {
+  html, body {
+    font-size: 0.8em;
+  }
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.25em;
+}
+h1, header > h1 + * {
+  font-family: "Playfair Display", serif;
+  color: #59524f;
+}
+header > h1 + * {
+  font-size: 1.4em;
+  margin-top: 0;
+}
+.header {
+  position: fixed;
+  float: left;
+  width: 18em;
+  min-height: 100%;
+  color: #f0f0f2;
+  background-color: #e227e2;
+}
+.header__menu ul {
+  padding-left: 2em;
+}
+.header__branding {
+  padding: 1.8em 1em 2em 1em;
+  font-size: 2.5em;
+  background-color: #f157f1;
+  font-family: "Dancing Script", cursive;
+}
+.header__menuItem {
+  margin: 3em 0;
+  font-size: 1.2em;
+  perspective: 1000px;
+  perspective-origin: calc(1.25em * 0.5) 50%;
+}
+.header__menuItemIcon {
+  float: left;
+  width: 1.25em;
+  height: 1.25em;
+}
+.header__menuItemIcon svg {
+  width: 1.25em;
+  height: 1.25em;
+  fill: #f0f0f2;
+  stroke: #f0f0f2;
+}
+.header__menuItemLabel {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 1em;
+}
+.main {
+  float: right;
+  padding: 1.25em 2.5em;
+  width: calc(100% - 18em);
+  min-height: 100%;
+  background-color: #d9ccc1;
+}
+#cards {
+  max-width: 75em;
+}
+.card {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  height: 15em;
+  width: 15em;
+  background-color: #e227e2;
+  border-radius: 25px;
+  margin: 2em 2em 0 0;
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f2;
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
+  z-index: -1;
+}
+.card_favorited {
+  transform-origin: 0.5em 0.5em;
+}
+.card_favorited::after {
+  z-index: 1;
+  opacity: 1;
+}
+.card_hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+}
+.card__image {
+  width: 15em;
+  height: 75%;
+  border-radius: 25px 25px 0 0;
+}
+.card__image > img {
+  position: relative;
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+.card__image_loaded > img {
+  opacity: 1;
+}
+.card__choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+}
+.card__choice button {
+  font-size: 0.9em;
+  background-color: #f157f1;
+  width: 3em;
+  height: 3em;
+  border: none;
+  border-radius: calc(3em / 2);
+  padding: 0.3em 0 0 0;
+  margin: 0 1em;
+  cursor: pointer;
+}
+.card__choice button svg {
+  width: 1.3em;
+  height: 1.3em;
+  fill: #d9ccc1;
+  stroke: #d9ccc1;
+}
+.card__choice button[data-action="dislike"]:hover, .card__choice button[data-action="dislike"]:focus {
+  background-color: #690781;
+}
+.card__choice button[data-action="like"]:hover, .card__choice button[data-action="like"]:focus {
+  background-color: #690781;
+}
+/*  */

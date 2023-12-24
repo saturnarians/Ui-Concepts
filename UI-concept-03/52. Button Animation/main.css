@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    background-color: #00133A;
+}
+.parent {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ 
+}
+.child {
+    background-color: blueviolet;
+    position: absolute;
+    border-radius: 50%;
+     animation: ani 3s linear infinite;
+     opacity: 0.7;
+}
+.a4 {
+     width: 100px;
+     height: 100px;
+     background-color: rgb(252, 252, 252);
+     animation-delay: 0.2s;
+      
+}
+.a3 {
+    width: 120px;
+    height: 120px;
+    background-color:#455270;
+       animation-delay: 0.4s;
+        
+}
+.a2 {
+    width: 140px;
+    height: 140px;
+    background-color: #344262;
+    animation-delay: 0.6s;
+   
+}
+.a1 {
+    width: 160px;
+    height: 160px;
+    background-color: #192A4D;
+    animation-delay: 0.8s;
+  
+}
+
+.play {
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 35px solid #00133A;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+     animation-delay: 0.2s;
+     animation: ani 3s linear infinite;
+    
+}
+@keyframes ani {
+   40%,60% {
+       transform: scale(1);
+   } 
+   50% {
+       transform: scale(0.9);
+       
+   }
+}

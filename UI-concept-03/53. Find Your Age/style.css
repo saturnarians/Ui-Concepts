@@ -1,0 +1,115 @@
+
+body {
+  background-color: rgb(43, 42, 42);
+}
+
+.container {
+  overflow: hidden;
+  width: 620px;
+  height: auto;
+  margin: 100px auto;
+  background-color: rgb(0, 0, 0);
+  border-radius: 14px;
+  border: 2px solid aqua;
+}
+
+.input_part {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_part {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.block {
+  padding: 5px 16px;
+}
+
+.block .title {
+  text-align: center;
+  color: aqua;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+
+}
+
+.form_part h4 {
+  padding: 20px;
+  font-size: 26px;
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 0px;
+  box-shadow: 0px 2px aqua;
+  background: rgb(34, 34, 34);
+  font-size: 34px;
+  color: aqua;
+}
+
+input[type="text"] {
+  width: 100px;
+  margin: auto;
+  outline: none;
+  text-align: center;
+  border: 2px solid aqua;
+  padding: 12px 14px;
+  background-color: #f7f7f7;
+  border-radius: 2px;
+  color: #7e7f80;
+  font-size: 17px;
+}
+
+input[type="text"]:focus {
+  background-color: #ffffff;
+  border: 2.5px solid rgb(154, 233, 36);
+  outline: none;
+}
+
+.enter {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+input[type="button"] {
+  width: 220px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background-color: inherit;
+  color: aqua;
+  font-weight: bolder;
+  padding: 14px 16px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid aqua;
+  font-size: 16px;
+  transition: all 0.3s ease-out;
+}
+
+input[type="button"]:hover {
+  background-color: aqua;
+  color: black;
+}
+
+#age {
+  text-align: center;
+  display: block;
+  margin: 10px;
+  margin-top: 35px;
+  padding: 10px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 23px;
+  line-height: 1.5;
+  word-spacing: 2.7px;
+  color: aqua;
+}

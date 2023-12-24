@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Side Menu</title>
+  </head>
+  <body>
+    <header id="header">
+      <i class="fas fa-bars" id="nav-toggler"></i>
+      <div>
+        <i class="far fa-user-circle"></i>
+        <span>Username</span>
+      </div>
+    </header>
+
+    <nav id="nav">
+      <div>
+        <div class="logo">
+            <i class="fas fa-atlas"></i>
+          <span>BooKShoP</span>
+        </div>
+        <ul class="nav">
+          <li class="nav__item">
+            <a href="#" class="nav__item-link">
+              <i class="fas fa-home"></i>
+              <span>Dashboard <i class="fas fa-angle-down"></i></span>
+            </a>
+            <ul class="display-none__ul">
+              <li>
+                <a href="#" class="sub_link">Top books</a>
+              </li>
+              <li>
+                <a href="#" class="sub_link">Bestseller</a>
+              </li>
+              <li>
+                <a href="#" class="sub_link">New books</a>
+              </li>
+              <li>
+                <a href="#" class="sub_link">Old books</a>
+              </li>
+              
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__item-link">
+                <i class="fas fa-book-reader"></i>
+                <span>My books</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__item-link active">
+              <i class="fas fa-user-alt"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__item-link">
+                <i class="fas fa-credit-card"></i>
+              <span>My account</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__item-link">
+                <i class="fas fa-user-cog"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#" class="sign-out">
+        <i class="fas fa-sign-out"></i>
+        <span>Log Out</span>
+      </a>
+    </nav>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

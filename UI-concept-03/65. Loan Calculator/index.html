@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="loan-container">
+      <h1>Loan Calculator</h1>
+
+      <div class="input">
+        <p>Loan: $</p>
+        <input
+          id="amount"
+          type="number"
+          min="1"
+          max="1000000"
+          onchange="payLoan()"
+        />
+        <p>Interest Rate: %</p>
+        <input
+          id="rate"
+          min="0"
+          max="100"
+          value="10"
+          step=".1"
+          onchange="payLoan()"
+        />
+        <p>Months to Pay:</p>
+        <input
+          class="month-pay"
+          id="months"
+          type="number"
+          min="1"
+          max="300"
+          value="1"
+          step="1"
+          onchange="payLoan()"
+        />
+      </div>
+
+      <h2 id="MonthlyPayment"></h2>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

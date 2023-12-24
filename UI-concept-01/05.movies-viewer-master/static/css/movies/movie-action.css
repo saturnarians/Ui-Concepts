@@ -1,0 +1,25 @@
+.movie__action {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.movie__action i {
+  color: var(--white);
+  position: absolute;
+ 
+  top: 25px;
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: 300;
+  transition: transform 0.5s ease-in-out, right 0.3s ease-in-out;
+  transform: rotate(360deg);
+  right: -100px;
+}
+
+.movie.open .movie__action i {
+  right: 130px;
+  transform: rotate(0deg);
+}

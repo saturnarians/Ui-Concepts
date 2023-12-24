@@ -1,0 +1,149 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f6f8;
+  background-image: linear-gradient(315deg, #15a3db 0%, #e0e0e0 100%);
+  font-family: serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 0.5rem;
+  padding: 10px 15px;
+  border: none;
+  font-weight: bold;
+
+}
+
+button:hover {
+  color: #F0F0ED;
+  background-color: #c74256;
+  font-weight: bold;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+select {
+  width: 200px;
+  padding: 5px;
+  font-family: inherit;
+  appearance: none;
+  border-radius: 0.5rem;
+  background-color: #F2F3F4;
+}
+
+select:focus,
+button:focus, input:focus {
+  outline: 0;
+}
+
+.settings-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.settings {
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  background-color: #2e7ec0;
+  color: #F0F0ED;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.settings.hide {
+  transform: translateY(-100%)
+}
+
+.container {
+  background-color: #2e7ec0;
+  padding: 20px;
+  border-radius: 0.5rem;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  color: #F0F0ED;
+  position: relative;
+  text-align: center;
+  height: 90%;
+  width: 90%;
+  max-width: 90vw;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 40px;
+}
+
+h2 {
+  background-color: #2e7ec0;
+  padding: 8px;
+  border-radius: 0.5rem;
+  margin: 0 0 70px;
+}
+p{
+  font-size: 20px;
+}
+
+input {
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  width: 400px;
+  padding: 12px 20px;
+  margin-top: 10px;
+}
+
+.score-container {
+  position: absolute;
+  top: 60px;
+ font-size: 20px;
+ right: 200px;
+  font-weight: bold;
+}
+
+.time-container {
+  position: absolute;
+  top: 60px;
+ left: 200px;
+ font-size: 20px;
+ font-weight: bold;
+}
+
+.end-game-container {
+  background-color: inherit;
+  border-radius: inherit;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

@@ -1,0 +1,210 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    background-color:black;
+}
+
+ /* - - - Dot Collision Part - - - */
+
+ .dot-collision {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: aqua;
+    margin-bottom: 50px;
+  }
+  
+  .dot-collision::before, .dot-collision::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  
+  .dot-collision::before {
+    left: -10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: aqua;
+    animation: dotCollisionBefore 2s infinite ease-in;
+  }
+  
+  .dot-collision::after {
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: aqua;
+    animation: dotCollisionAfter 2s infinite ease-in;
+    animation-delay: 1s;
+  }
+  
+  @keyframes dotCollisionBefore {
+    0%,
+    50%,
+    75%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-15px);
+    }
+  }
+  
+  @keyframes dotCollisionAfter {
+    0%,
+    50%,
+    75%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(15px);
+    }
+  }
+  
+
+
+ /* - - - Dot Pulse Part - - - */
+
+ .dot-pulse {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: aqua;
+    box-shadow: 9999px 0 0 -5px aqua;
+    animation: dotPulse 1.5s infinite linear;
+    animation-delay: .25s;
+    margin-bottom: 50px;
+  }
+  
+  .dot-pulse::before, .dot-pulse::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: aqua;
+  }
+  
+  .dot-pulse::before {
+    box-shadow: 9984px 0 0 -5px aqua;
+    animation: dotPulseBefore 1.5s infinite linear;
+    animation-delay: 0s;
+  }
+  
+  .dot-pulse::after {
+    box-shadow: 10014px 0 0 -5px aqua;
+    animation: dotPulseAfter 1.5s infinite linear;
+    animation-delay: .5s;
+  }
+  
+  @keyframes dotPulseBefore {
+    0% {
+      box-shadow: 9984px 0 0 -5px aqua;
+    }
+    30% {
+      box-shadow: 9984px 0 0 2px aqua;
+    }
+    60%,
+    100% {
+      box-shadow: 9984px 0 0 -5px aqua;
+    }
+  }
+  
+  @keyframes dotPulse {
+    0% {
+      box-shadow: 9999px 0 0 -5px aqua;
+    }
+    30% {
+      box-shadow: 9999px 0 0 2px aqua;
+    }
+    60%,
+    100% {
+      box-shadow: 9999px 0 0 -5px aqua;
+    }
+  }
+  
+  @keyframes dotPulseAfter {
+    0% {
+      box-shadow: 10014px 0 0 -5px aqua;
+    }
+    30% {
+      box-shadow: 10014px 0 0 2px aqua;
+    }
+    60%,
+    100% {
+      box-shadow: 10014px 0 0 -5px aqua;
+    }
+  }
+
+  
+
+ /* - - - Dot Flashing Part - - - */
+
+  .dot-flashing {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: aqua;
+    animation: dotFlashing 1s infinite linear alternate;
+    animation-delay: .5s;
+    margin-bottom: 50px;
+  }
+  
+  .dot-flashing::before, .dot-flashing::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  
+  .dot-flashing::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: aqua;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  
+  .dot-flashing::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: aqua;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 1s;
+  }
+  
+  @keyframes dotFlashing {
+    0% {
+      background-color: aqua;
+    }
+    50%,
+    100% {
+      background-color: #ebe6ff;
+    }
+  }
+  
+ 

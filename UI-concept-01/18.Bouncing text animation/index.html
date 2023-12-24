@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing text animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="link">
+        <a href="https://codepen.io/fullstackedu/pen/dyQZBNz">Link</a>
+    </div>
+    
+    <!--
+
+1. Stretchy Pill Ball
+2. Interval / Duration CSS Variables
+-->
+
+  <div class="ball" data-splitting>
+    <div class="ball-top"></div>
+  </div>
+  
+  <div class="phrase" data-splitting="items">
+    <span class="word slide" data-splitting="chars">Frontchannels</span>
+    <span class="word slide" data-splitting="chars">and</span>
+    <span class="word slide" data-splitting="chars">Sarvarcoder</span>
+    <span class="word smiley" data-splitting="chars">:)</span>
+  </div>
+
+    <script src="https://cdn.skypack.dev/splitting"></script>
+    <script src="main.js"></script>
+</body>
+</html>

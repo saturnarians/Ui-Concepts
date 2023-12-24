@@ -1,0 +1,49 @@
+img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* sections part*/
+  section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .intro,
+  .img {
+    flex: 1;
+  }
+  
+  .intro {
+    padding: 2rem;
+  }
+  
+  /* scroll indicator */
+  #scroll-indicator {
+    position: fixed;
+    top: 60px;
+    height: 10px;
+    width: 0%;
+    background-image: linear-gradient(to left, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    z-index: 100;
+  }
+  main {
+    overflow: hidden;
+  }
+  footer {
+    padding: 4rem;
+    background-color: #343434;
+    color: #f3f3f3;
+    font-size: 2rem;
+    text-align: center;
+  }

@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+body {
+    background-color: rgb(5, 44, 42);
+    font-family: fantasy;
+    user-select: none;
+}
+
+h1 {
+margin: 30px 0;
+color: aquamarine;
+}
+
+p {
+    color: rgb(194, 194, 194);
+    letter-spacing: 1.1px;
+}
+
+.container {
+  max-width: 40em;
+  margin: 10px auto;
+}
+
+.accordion-label {
+    user-select: none;
+    text-align: center;
+  font-weight: bold;
+  position: relative;
+  padding: 14px;
+  margin-bottom: .5em;
+  display: block;
+  cursor: pointer;
+  background-color:aquamarine;
+  color: black;
+  transition: background-color .15s ease-in-out;
+}
+
+.accordion-input:checked + label, .accordion-label:hover {
+  background-color:black;
+  color: aquamarine;
+}
+
+.accordion-label:after, .accordion-input:checked + .accordion-label:after {
+  content: "show";
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  width: 3.5em;
+  height: 100%;
+  line-height: 2.25em;
+  text-align: center;
+  background-color: #e5e5e5;
+  transition: background-color .15s ease-in-out;
+}
+
+.accordion-label:hover:after, .accordion-input:checked + .accordion-label:after {
+  background-color: #b5b5b5;
+}
+
+.accordion-input:checked + .accordion-label:after {
+  content: "hide";
+}
+
+.accordion-input {
+  display: none;
+}
+
+.accordion-text, .accordion-sub-text {
+  opacity: 0;
+  height: 0;
+  margin-bottom: .5em;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+}
+
+.accordion-input:checked ~ .accordion-text, .accordion-sub .accordion-input:checked ~ .accordion-sub-text { 
+  opacity: 1;
+  height: auto;
+}
+
+.accordion-sub .accordion-label {
+  background: none;
+  font-weight: 600;
+  padding: .5em 2em;
+  margin-bottom: 0;
+}
+
+.accordion-sub .accordion-label:checked {
+  background: none;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.accordion-sub .accordion-label:after, .accordion-sub .accordion-input:checked + .accordion-label:after {
+  left: 0;
+  background: none;
+}
+
+.accordion-sub .accordion-input:checked + label, .accordion-sub .accordion-label:hover {
+  background: none;
+}
+
+.accordion-sub-text {
+  padding: 0 1em 0 2em;
+}
